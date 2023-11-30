@@ -17,3 +17,24 @@ function ajouterArticle()
         return "Error: " . $sql . "<br>" . mysqli_error($connex);
     }
 }
+
+function deleter($request)
+{
+    require_once("lib/connex.php");
+
+    $id = mysqli_real_escape_string($connex, $request['id']);
+
+    foreach ($_POST as $key => $value) {
+        $$key = mysqli_real_escape_string($connex, $value);
+    }
+
+
+    $sql = "DELETE FROM forum WHERE id = '$id' ";
+
+
+    if (mysqli_query($connex, $sql)) {
+        return true;
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($connex);
+    }
+}

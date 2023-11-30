@@ -1,3 +1,4 @@
+<h1>Créer une compte:</h1>
 <form action="index.php?controller=user&function=newUser" method="post">
     <label> Nom :
         <input name="nom" type="text">

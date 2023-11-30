@@ -19,7 +19,18 @@ function creerArticle()
     header('location: ?controller=forum&function=AfficherForum');
 }
 
-function logout(){
+function logout()
+{
     session_destroy();
     render('/user/login.php');
+}
+
+function deleterArticle($request)
+{
+    require('models/forum.php');
+
+    deleter($request);
+
+    // header('location: ?controller=forum&function=AfficherForum');
+    echo "apagou";
 }

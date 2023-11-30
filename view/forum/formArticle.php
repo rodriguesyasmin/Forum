@@ -11,7 +11,7 @@ require_once('lib/checkSession.php');
     </div>
     <div>
         <label for="article">Article:</label>
-        <textarea id="article" name="article" maxlength="1000" minlength="20" required> </textarea>
+        <input type="text" id="article" name="article" maxlength="1000" minlength="20" required> 
     </div>
     <div>
         <label for="date">Date:</label>

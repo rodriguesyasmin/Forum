@@ -1,3 +1,4 @@
+<h1>Login:</h1>
 <form id="loginForm" action="index.php?controller=user&function=validation" method="post">
     <label for="nomUtilisitaseurEmail">Email:</label>
     <input type="email" id="nomUtilisitaseurEmail" name="nomUtilisitaseurEmail" required>

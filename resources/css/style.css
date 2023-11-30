@@ -4,13 +4,13 @@ body{
 }
 
 nav {
-    background-color:  #007bff;
+    background-color:  lightpink;
 }
 
 /* Style the list and remove list styling */
 nav ul {
     list-style: none;
-    padding: 10px;
+    padding: 20px;
     margin: 0;
 }
 
@@ -22,6 +22,9 @@ nav li {
 
 /* Style the links (anchor tags) */
 nav a {
+    border: 2px solid violet;
+    padding: 5px;
+    border-radius: 10px;
     text-decoration: none; /* Remove underline */
     color: #fff; /* Text color */
     font-weight: bold;
@@ -29,7 +32,7 @@ nav a {
 
 /* Change link color on hover */
 nav a:hover {
-    color: #ccc;
+    color: violet
 }
 
 .container{
@@ -111,4 +114,40 @@ input, select {
 }
 .text-danger{
     color: #d63a3a;
+}
+
+/* Div*/
+.forum-post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.post-content {
+    margin-top: 10px;
+    color: #555;
+}
+
+.post-info {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: #777;
+}
+
+.post-date, .post-author {
+    font-size: 14px;
+}
+
+.invisible {
+    display: none;
 }

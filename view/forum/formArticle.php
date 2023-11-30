@@ -11,7 +11,7 @@ require_once('lib/checkSession.php');
     </div>
     <div>
         <label for="article">Article:</label>
-        <textarea id="article" name="article" maxlength="1000" minlength="20" required> </textarea>>
+        <textarea id="article" name="article" maxlength="1000" minlength="20" required> </textarea>
     </div>
     <div>
         <label for="date">Date:</label>
@@ -21,5 +21,5 @@ require_once('lib/checkSession.php');
         <input type="hidden" name="author" value="<?= $_SESSION['nom']; ?>">
         <input type="hidden" name="utilisateur_id" value="<?= $_SESSION['id']; ?>">
     </div>
-    <input type="submit" value="Login">
+    <input type="submit" value="Créer">
 </form>

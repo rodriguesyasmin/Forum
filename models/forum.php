@@ -12,6 +12,7 @@ function ajouterArticle()
 
     if (mysqli_query($connex, $sql)) {
         return mysqli_insert_id($connex);
+        // render('/base/welcome.php');
     } else {
         return "Error: " . $sql . "<br>" . mysqli_error($connex);
     }

@@ -1,6 +1,7 @@
 <?php
 
 function login(){
+   
    render('/user/login.php');
 }
 
@@ -20,6 +21,7 @@ function newUser()
 {
    require_once(MODEL_DIR . "/user.php");
    clientInsert();
+   render('/user/login.php');
   
 }
 

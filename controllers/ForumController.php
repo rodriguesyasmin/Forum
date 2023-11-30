@@ -1,19 +1,25 @@
 <?php
 function AfficherForum()
 {
+    //require_once('lib/checkSession.php');
     render('/user/forum.php');
 }
 function afficherFormArticle()
 {
-
-    error_log('chega atè aqui');
+    require_once('lib/checkSession.php');
     render('/forum/formArticle.php');
 }
 
 function creerArticle()
 {
-    error_log('chegou no controller' . $_POST);
-    require_once('models/forum.php');
+
+    // error_log('chegou no controller' . $_POST);
+    require('models/forum.php');
     ajouterArticle();
-    render('/user/forum.php');
+    header('location: ?controller=forum&function=AfficherForum');
+}
+
+function logout(){
+    session_destroy();
+    render('/user/login.php');
 }

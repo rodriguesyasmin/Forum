@@ -55,6 +55,7 @@ function auth()
             $_SESSION['fingerPrint'] = md5($_SERVER['HTTP_USER_AGENT'] . $_SERVER['REMOTE_ADDR']);
 
             header('location:index.php?controller=forum&function=AfficherForum');
+         
         } else {
             header("location:index.php?controller=user&function=loginError");
         }

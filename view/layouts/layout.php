@@ -11,11 +11,10 @@
 <body>
     <nav>
         <ul>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="index.php?controller=forum&function=AfficherForum">Home</a></li>
             <li><a href="index.php?controller=user&function=login">Login</a></li>
             <li><a href="index.php?controller=user&function=create">Nouvel utilisateur</a></li>
             <li><a href="index.php?controller=forum&function=afficherFormArticle">Créer article</a></li>
-
         </ul>
     </nav>
     <div class="container">

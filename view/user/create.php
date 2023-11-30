@@ -11,5 +11,5 @@
     <label> Naissance :
         <input name="dateNaissance" type="date">
     </label>
-    <input type="submit" value="Save">
+    <input type="submit" value="Créer">
 </form>

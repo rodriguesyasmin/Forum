@@ -1,13 +1,10 @@
 <?php
 require_once('lib/connex.php');
-$sql = "SELECT * FROM forum limit 5";
+$sql = "SELECT * FROM forum";
 $result = mysqli_query($connex, $sql);
 
-require_once('lib/checkSession.php');
 if (!$_SESSION) {
-?>
-    <h1>Alguma coisa aqui : </h1>
-<?php
+
 } else {
 ?>
     <h1> Oi, <?= $_SESSION['nom']; ?>!
@@ -15,24 +12,25 @@ if (!$_SESSION) {
 }
 
     ?>
-
-
-    Aqui vai ser o forum
-
+    <h1>Bienvenue dans le forum!</h1>
 
     <?php
     foreach ($result as $row) {
 
     ?>
 
-        <div>
-            <div><?= $row['titre']; ?></div>
-            <div><?= $row['article']; ?></div>
-            <div><?= $row['dateArticle']; ?></div>
-            <div><?= $row['author']; ?></div>
+        <div class="forum-post">
+            <div class="post-title">Titre: <?= $row['titre']; ?></div>
+            <div class="post-content">Article :<?= $row['article']; ?></div>
+            <div class="post-info">
+                <div class="post-date">Date: <?= $row['dateArticle']; ?></div>
+                <div class="post-author">Author: <?= $row['author']; ?></div>
+            </div>
             <div class="invisible"><?= $row['utilisateur_id']; ?></div>
-
         </div>
+       
+
     <?php
     }
     ?>
+     <a href="index.php?controller=forum&function=logout"> Logout</a>

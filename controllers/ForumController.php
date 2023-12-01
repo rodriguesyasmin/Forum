@@ -28,9 +28,19 @@ function logout()
 function deleterArticle($request)
 {
     require('models/forum.php');
-
     deleter($request);
-
-    // header('location: ?controller=forum&function=AfficherForum');
     echo "apagou";
+}
+function afficherEditer($request)
+{
+    require('models/forum.php');
+    $postArticle = afficherFormEditer($request);
+    render('/forum/editFormArticle.php', $postArticle);
+}
+
+function editer()
+{
+    require('models/forum.php');
+    updatePost();
+    header('location: ?controller=forum&function=AfficherForum');
 }

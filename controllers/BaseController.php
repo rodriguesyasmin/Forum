@@ -1,9 +1,6 @@
 <?php
 
-function index(){
-    //require_once (VIEW_DIR."/base/welcome.php");
-
+function index()
+{
     render('/base/welcome.php');
 }
-
-?>

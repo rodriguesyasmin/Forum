@@ -18,5 +18,5 @@
         <input type="hidden" name="author" value="<?= $_SESSION['nom']; ?>">
         <input type="hidden" name="id" value="<?= $data['id']; ?>">
     </div>
-    <input type="submit" value="Créer">
+    <input type="submit" value="Modifier">
 </form>

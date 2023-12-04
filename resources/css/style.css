@@ -1,115 +1,126 @@
 * {
   margin: 0;
   padding: 0;
-}
-body {
-  font-family: Arial, sans-serif; /* Adicione a fonte desejada, se necessário */
-}
-h1 {
-  text-align: center;
-  color: #4b0082;
-  padding: 20px;
-}
-nav {
-  background-color: lightpink;
+  box-sizing: border-box;
 }
 
-/* Style the list and remove list styling */
+h1 {
+  text-align: center;
+  color: #1f4180;
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+} p{
+  margin: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+  background-color: #0e79bf;
+}
+
 nav ul {
   list-style: none;
-  padding: 20px;
+  padding: 10px;
   margin: 0;
 }
 
-/* Style the list items (menu items) */
 nav li {
-  display: inline;
-  margin-right: 20px; /* Add spacing between items */
+  display: inline-block;
+  margin-right: 20px;
 }
 
-/* Style the links (anchor tags) */
 nav a {
-  border: 2px solid #800080;
+  display: block;
+  border: 2px solid #8fd5dd;
   padding: 10px;
   border-radius: 10px;
-  text-decoration: none; /* Remove underline */
-  color: #fff; /* Text color */
-  font-weight: bold;
+  text-decoration: none;
+  color: #8fd5dd;
+  font-weight: bolder;
 }
 
-/* Change link color on hover */
 nav a:hover {
-  color: #800080;
+  color: #1e417b;
+  background-color: #8fd5dd;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
-/* Apply some basic styling to the form */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
 form {
-  width: 90%;
+  color: #1e417b;
   margin: 0 auto;
 }
 
-/* Style the labels and inputs */
 label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 input,
 select {
-  width: 100%;
-  padding: 5px;
+  width: calc(100% - 12px);
+  padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-/* Div*/
 .forum-post {
+  word-wrap: break-word;
   border: 1px solid #ddd;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin: 20px;
   padding: 15px;
-  background-color: #fff;
+  background-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .post-title {
-  font-size: 18px;
+  font-size: 26px;
   font-weight: bold;
-  color: #4b0082;
+  color: #1e417b;
 }
 
 .post-content {
+  font-family: monospace;
+  font-size: 18px;
   margin-top: 10px;
-  color: #555;
+  color: grey;
 }
 
 .post-info {
-  margin-top: 15px;
+ 
+  margin-top: 18px;
   display: flex;
   justify-content: space-between;
-  color: #777;
-}
-
-.post-date,
-.post-author {
-  font-size: 14px;
+  color: #1e417b;
+  font-size: 10px;
 }
 
 .invisible {
   display: none;
 }
 
-/*testtt */
-
 .container {
-  max-width: 800px;
-  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
   background-color: transparent;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  box-shadow: 0 0 10px #1e427b7b;
+  border-radius: 8px;
 }
 
 .invisible {
@@ -117,36 +128,53 @@ select {
 }
 
 button {
-  background-color: #4b0082;
-  color: #fff;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 3px;
   cursor: pointer;
+  background-color: #ff8b8ba4;
+  padding: 5px;
+  margin-right: 10px;
+  margin-top: 5px;
+  border: 1px solid #ff8b8be7;
+  border-radius: 5px;
 }
 
 button:hover {
-  background-color: #800080;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .logout-link {
   display: block;
-  margin-top: 20px;
+  margin: 20px;
   text-align: center;
 }
 
 .logout-link a {
-  color: #4b0082;
+  color: slategrey;
   text-decoration: none;
 }
 
 .logout-link a:hover {
-  color: #800080;
+  color: #0e79bf;
 }
 
 input[type="submit"] {
-  background-color: #4b0082;
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: #1e417b;
+  color: white;
+  width: 20%;
 }
-#article {
-  height: 100px;
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  color: #1e417b;
+  background-color: #8fd5dd;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+  overflow-wrap: break-word;
 }

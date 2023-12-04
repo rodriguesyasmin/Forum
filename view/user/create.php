@@ -4,13 +4,13 @@
         <input name="nom" type="text">
     </label>
     <label> Email:
-        <input name="nomUtilisitaseurEmail" type="email">
+        <input name="nomUtilisitaseurEmail" type="email" required>
     </label>
     <label> Mot de passe :
-        <input name="motDePasse" type="text" minlength="6" maxlength="20">
+        <input name="motDePasse" type="text" minlength="6" maxlength="20" required>
     </label>
     <label> Naissance :
-        <input name="dateNaissance" type="date">
+        <input name="dateNaissance" type="date" required>
     </label>
-    <input type="submit" value="Créer">
+    <input type="submit" value="Créer" required>
 </form>

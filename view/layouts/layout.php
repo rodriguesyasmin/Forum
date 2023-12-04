@@ -14,9 +14,14 @@
             <li><a href="index.php?controller=forum&function=AfficherForum">Forum</a></li>
             <li><a href="index.php?controller=user&function=login">Login</a></li>
             <li><a href="index.php?controller=user&function=create">Nouvel utilisateur</a></li>
-            <li><a href="index.php?controller=forum&function=afficherFormArticle">Créer article</a></li>
+            <?php if ($_SESSION) {
+
+            ?>
+
+                <li><a href="index.php?controller=forum&function=afficherFormArticle">Créer article</a></li> <?php } ?>
         </ul>
     </nav>
+
     <main>
         <div class="container">
             <?php echo $content; ?>

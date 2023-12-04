@@ -1,6 +1,6 @@
 <?php
 require_once('lib/connex.php');
-$sql = "SELECT * FROM forum order by dateArticle desc limit 5";
+$sql = "SELECT * FROM forum order by dateArticle desc ";
 $result = mysqli_query($connex, $sql);
 
 if (!$_SESSION) {
@@ -23,15 +23,17 @@ if (!$_SESSION) {
                 <div class="post-author">Author: <?= $row['author']; ?></div>
             </div>
             <div class="invisible"><?= $_SESSION['id']; ?></div>
-            <?php if ($_SESSION['id'] == $row['utilisateur_id']) { ?>
-                <a href="index.php?controller=forum&function=deleterArticle&id=<?= $row['id']; ?>"><button type="submit">deleter</button></a>
-                <a href="index.php?controller=forum&function=afficherEditer&id=<?= $row['id']; ?>"><button type="submit">Editer</button></a>
+            <?php if (isset($_SESSION['id']) && isset($row['utilisateur_id']) && $_SESSION['id'] == $row['utilisateur_id']) { ?>
+                <a href="index.php?controller=forum&function=deleterArticle&id=<?= $row['id']; ?>"><button type="submit">Deleter article</button></a>
+                <a href="index.php?controller=forum&function=afficherEditer&id=<?= $row['id']; ?>"><button type="submit">Modifier article</button></a>
             <?php
             } ?>
         </div>
     <?php
     }
+    if ($_SESSION) { ?>
+        <div class="logout-link">
+            <a href="index.php?controller=forum&function=logout">Logout</a>
+        </div>
+    <?php }
     ?>
-    <div class="logout-link">
-        <a href="index.php?controller=forum&function=logout">Logout</a>
-    </div>
